@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>テトリス</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .block {
+      background-size: 300% 300%;
+      animation: gradient 5s ease infinite;
+    }
+
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="score">
+      スコア: <span id="score">0</span><br/>
+      レベル: <span id="level">1</span>
+    </div>
+    <canvas id="game-board" width="320" height="640"></canvas>
+  </div>
+  <script src="tetris.js"></script>
+</body>
+</html>
